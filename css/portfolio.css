@@ -1,0 +1,1056 @@
+html, body {
+  margin:0px;
+  padding:0px;
+  background-color: #fff;
+  height:100%;
+  font-family: 'Montserrat', sans-serif;
+
+}
+* {box-sizing: border-box}
+
+
+/* Style for the Hamburger & the Navigation Bar */
+
+/*============ Navbar ============*/
+#navbar {
+position: fixed;
+top: 0;
+height: 50px;
+line-height: 1px;
+width: 100vw;
+z-index: 10;
+font-weight:bold;
+background-color:#2196F3;
+}
+.nav-wrapper {
+text-align: right;
+width: 100%;
+padding-right: 120px; 
+position: fixed;  
+float:right;
+z-index:-1;
+} 
+
+#navbar ul {  
+padding-top: 10px;
+padding-right: 50px;
+display: inline-block;  
+list-style: none;
+text-align: center;
+transition: transform 0.5s ease-out;
+} @media(max-width: 1000px) {
+  #navbar ul {
+    display: none;
+  }
+} 
+
+#navbar li {
+display: inline-block;
+}
+
+#navbar li a {
+color: #fff;  
+display: block;
+font-size: 12px;
+letter-spacing: 1px;
+margin: 0 10px;
+padding: 0 4px;
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+transition: all 0.5s ease;
+}
+
+#navbar li a:hover {
+color: #FFFF00;
+transition: all 1s ease;}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+content: '';
+position: absolute;
+width: 0%;
+height: 1px;
+bottom: -12px;
+background: #FFFF00;
+}
+
+#navbar li a:before {
+left: 0;
+transition: 0.5s;}
+
+#navbar li a:after {
+background: #FFFF00; 
+right: 0;
+}
+
+#navbar li a:hover:before {
+background: #FFFF00;
+width: 100%;
+transition: width 0.5s cubic-bezier(0.22,0.61,0.36,1);}
+
+#navbar li a:hover:after {
+background: transparent;
+width: 100%;
+}
+
+
+/*======= Responsive Mobile Menu========*/
+.overlay-menu {
+background: rgba(33, 150, 243, 0.98);
+color: #fff;
+justify-content: center;
+position: fixed;
+top: 0;
+padding-left: 40%;
+padding-top: 30%;
+transform: translateX(-100%);
+width: 100%;
+height: 100%;
+transition: transform 0.2s ease-out;
+z-index: 3;}
+
+.overlay-menu ul, .overlay-menu li {
+display: block;
+position: relative;
+  width: auto;}
+
+.overlay-menu li a {
+display: block;
+font-size: 18px; 
+padding: 10px 0; 
+text-align: left; 
+text-transform: uppercase;
+transition: color 0.3s ease;
+text-decoration: none;
+color: #fff;
+}
+
+/* Animated Bottom Line */
+.overlay-menu li a:before, .overlay-menu li a:after {
+content: '';
+position: absolute;
+width: 0%;
+height: 1px;
+bottom: -1px;
+background: #2196F3;
+}
+
+.overlay-menu li a:before {
+left: 0;
+transition: 0.5s;}
+
+.overlay-menu li a:after {
+background: white;
+right: 0;
+/* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */}
+
+.overlay-menu li a:hover:before {
+background: #FFFF00;
+width: 70%;
+transition: width 0.5s cubic-bezier(0.22, 0.61,0.36, 1);}
+
+.overlay-menu li a:hover:after {
+background: transparent;
+width: 100%;
+/* transition: 0s; */}
+
+/* The style for the Logo */
+#logo {
+    padding-left: 120px;
+    height:50px; 
+    float:left;
+}
+
+/* This is the Grid the home Page */
+#home-grid {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "header-area"
+  "main-index"
+  "footer-area";
+}
+
+/* The Main Area of the Grid & the sub-areas*/
+#main-index {
+grid-area:main-index;
+ height:100%;
+}
+
+/* This is the Grid the Portfolio Page */
+#portfolio-grid {
+height:100%;
+display:grid;
+grid-template-columns: 1fr;
+grid-template-areas: 
+"header-area"
+"main-area"
+"footer-area";
+}
+
+/* The Header Area of the Grid */
+#header {
+grid-area: header-area;
+}
+
+header ul {
+float:right;
+display: inline-flex;
+list-style: none;
+padding-right:60px;
+}
+
+header ul i {
+float:right;
+padding:8px;
+color:#2196F3;
+}
+
+/* The Main Area of the Grid & the sub-areas*/
+#portfolio-main {
+/* padding-top:90px; */
+height:100%;
+grid-area:main-area;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+    "title-area title-area title-area title-area"
+    "web-area content-area animation-area ux-area";
+}
+#portfolio-main section {
+  height:700px;
+  cursor:pointer;
+}
+#portfolio-main section:hover {
+  border: solid 1px #fff;
+  opacity: 0.9;
+}
+#portfolio-main section h2{
+  margin-top: 350px;
+  text-align:center;
+  background-color:rgba(33,150,243, 0.94);
+  padding-top:14px;
+  padding-bottom:14px;
+  color:#fff;
+  font-size:18px;
+}
+#portfolio-title {
+    grid-area:title-area;
+    padding-top:46px;
+    text-align:center;
+    font-size:24px;
+    text-transform: uppercase;
+    color:#2196F3;
+}
+
+#basic-web {
+grid-area:web-area;
+background-image: url('../images/web.jpg');
+background-position: center;
+background-size:cover;
+
+}
+#basic-content{
+grid-area:content-area;
+background-image: url('../images/content.jpg');
+background-position: center;
+background-size:cover;
+}
+#basic-animation{
+grid-area:animation-area;
+background-image: url('../images/animation.jpg');
+background-position: center;
+background-size:cover;
+}
+#basic-ux{
+grid-area:ux-area;
+background-image: url('../images/ux.jpg');
+background-position: center;
+background-size:cover;
+}
+
+/* The Theme Grid & grid-layouts for Basic: Web, Content, Animation, UX & About Me Pages */
+#theme-grid {
+  height:100%;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+        "header-area"
+        "theme-area"       
+        "footer-area";
+}
+#web-main,
+#content-main,
+#animation-main,
+#ux-main,
+#profile-main {
+  grid-area: theme-area;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+      "theme-title-area theme-title-area theme-title-area"
+      "image-area-1 description-area image-area-3"
+      "image-area-2 description-area image-area-4";
+}
+/* The Basic Web Sections */
+#web-image-1 {
+  grid-area: image-area-1;  
+  background-image: url('../images/web-main.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#web-image-2 {
+  grid-area: image-area-2;  
+  background-image: url('../images/moodboard.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#web-image-3 {
+  grid-area: image-area-3;  
+  background-image: url('../images/style-tile.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#web-image-4 {
+  grid-area: image-area-4;  
+  background-image: url('../images/logo.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+/* The Basic Content Sections */
+#content-image-1 {
+  grid-area: image-area-1;  
+  background-image: url('../images/green-routes.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#content-image-2 {
+  grid-area: image-area-2;  
+  background-image: url('../images/storyboard.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#content-image-3 {
+  grid-area: image-area-3;  
+  background-image: url('../images/cycling-guide.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat;   
+}
+#content-image-4 {
+    grid-area: image-area-4;  
+    background-image: url('../images/prototype.jpg');
+    background-position: top;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+/* The Basic Animation Sections */
+#animation-image-1 {
+  grid-area: image-area-1;  
+  background-image: url('../images/pinnochio.jpg');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#animation-image-2 {
+  grid-area: image-area-2;  
+  background-image: url('../images/pinocchio-asset.jpg');
+  background-position: bottom;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#animation-image-3 {
+  grid-area: image-area-3;  
+  background-image: url('../images/simple-anim.jpg');
+  background-position: bottom;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+#animation-image-4 {
+    grid-area: image-area-4;  
+    background-image: url('../images/storytelling.jpg');
+    background-position: top;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+/* The Basic UX Sections */
+#ux-image-1 {
+  grid-area: image-area-1;  
+  background-image: url('../images/ux-prototype.jpg');
+  background-position: top;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#ux-image-2 {
+  grid-area: image-area-2;  
+  background-image: url('../images/ux-map.jpg');
+  background-position: center;
+  background-size: contain; 
+  background-repeat: no-repeat; 
+}
+#ux-image-3 {
+  grid-area: image-area-3;  
+  background-image: url('../images/ux-prototype-xd.jpg');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;   
+}
+#ux-image-4 {
+    grid-area: image-area-4;  
+    background-image: url('../images/ux-xd-prototype.jpg');
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
+/* The Who Am I Sections */
+#profile-image-1 {
+  grid-area: image-area-1;  
+  background-image: url('../images/zakinthos.jpg');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color:#2196F3;
+}
+#profile-image-2 {
+  grid-area: image-area-2;  
+  background-image: url('../images/cave-zante.jpg');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color:#2196F3;
+}
+#profile-image-3 {
+  grid-area: image-area-3;  
+  background-image: url('../images/zante.jpg');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;   
+  background-color:#2196F3;
+}
+#profile-image-4 {
+    grid-area: image-area-4;  
+    background-image: url('../images/doggos-zante.jpg');
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color:#2196F3;
+}
+.profile-title {
+  text-align:center;
+  background-color:#2196F3;
+  color:#fff;
+  padding:16px;
+}
+
+#theme-description {
+  grid-area: description-area;  
+} 
+/* The paragraph style inside the Themes-Pages */
+.description {
+  margin:0px;
+  padding-left:24px;
+  padding-right:24px;
+}
+#theme-title {
+  grid-area:theme-title-area;
+  text-align:center;
+  margin:0px;
+  font-size:24px;
+  padding-top:60px;
+  padding-bottom:20px;
+}
+
+/* The Grid on Footer */
+#footer {
+grid-area:footer-area;
+text-align:center;
+}
+
+/* This is the Style for Google Maps */
+#map {
+height:100%;
+}
+
+/* The Style for the Text & the Icons Inside the Footer */
+.copyright {
+   font-size:12px;
+}
+.fa-heart, .fa-coffee {
+  color:#2196F3;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color:#2196F3;
+  font-weight:bold;
+}
+
+/* The Style for the Buttons */
+button {
+  background-color:#2196F3;
+  text-align:center;
+  padding:12px;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  width:300px;
+}
+button:hover,
+#next:hover,
+#prev:hover {
+  background-color:#1976D2;
+}
+#next,
+#prev {
+  width:160px;
+  background-color:#2196F3;
+  color:#fff;
+  border-radius: 10px;
+}
+
+/* The FLow inside the Themes-Pages */
+#flow {
+  list-style: none;
+}
+
+/* The Style for the Social Media */
+ul#so-me {
+  text-align:center;
+  list-style-type:none;
+}
+
+ul#so-me li {
+  display:inline;
+}
+
+ul#so-me li a:hover,
+ul#so-me li a:active {
+  color: #1976D2;
+}
+
+/* The Style for the Form */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: #2196F3;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1976D2;
+  color:#fff;
+}
+
+textarea{
+  height:180px;
+}
+
+form p {
+  text-align:center;
+}
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  max-width:50%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  background-color: #2196F3;
+  color:#fff;
+}
+
+.buttons-container {
+  text-align:center;
+}
+
+
+/* Media Queries for Responsive Web Design */
+/* SmartPhones */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+/* The style for the Logo */
+#logo { 
+  height:50px; 
+  float:none;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+  padding-left: 0;
+}
+.menuIcon {
+cursor: pointer;
+display: block;
+position: absolute;
+right: 15px;
+top: 20px;
+height: 23px;
+width: 27px;
+z-index: 12;}
+
+/* Icon Bars */
+.icon-bars {
+background: white;
+position: absolute;
+left: 1px;
+top: 45%;
+height: 2px;
+width: 20px;
+transition: 0.4s;} 
+
+.icon-bars::before {
+background: white;
+content: '';
+position: absolute;
+left: 0;
+top: -8px;
+height: 2px;
+width: 20px;
+transition: 0.3s width 0.4s;
+}
+
+.icon-bars::after {
+margin-top: 0px;
+background: white;
+content: '';
+position: absolute;
+left: 0;
+bottom: -8px;
+height: 2px;
+width: 20px;
+transition: 0.3s width 0.4s;
+}
+
+/* Bars Shadows */
+.icon-bars.overlay {
+background: #FFFF00;
+width: 20px;
+animation: middleBar 3s infinite 0.5s;
+} @keyframes middleBar {
+  0% {width: 0px}
+  50% {width: 20px}
+  100% {width: 0px}
+} 
+
+.icon-bars.overlay::before {
+background: #FFFF00;
+width: 10px;
+animation: topBar 3s infinite 0.2s;
+} @keyframes topBar {
+  0% {width: 0px}
+  50% {width: 10px}
+  100% {width: 0px}
+} 
+
+.icon-bars.overlay::after {
+background: #FFFF00;
+width: 15px;
+animation: bottomBar 3s infinite 1s;
+} @keyframes bottomBar {
+  0% {width: 0px}
+  50% {width: 15px}
+  100% {width: 0px}
+} 
+
+
+/* Toggle Menu Icon */
+
+.menuIcon {position: fixed;}
+.menuIcon.toggle .icon-bars {
+top: 5px;
+transform: translate3d(0, 5px, 0) rotate(135deg);
+transition-delay: 0.1s;
+transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+.menuIcon.toggle .icon-bars::before {
+top: 0;
+transition-delay: 0.1s;
+opacity: 0;}
+
+.menuIcon.toggle .icon-bars::after {
+top: 10px;
+transform: translate3d(0, -10px, 0) rotate(-270deg);
+transition-delay: 0.1s;
+transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+.menuIcon.toggle .icon-bars.overlay {
+width: 20px;
+opacity: 0;
+transition: all 0s ease 0s;}
+
+/* ============== The Grid for Tablets & SmartPhones  ==============*/
+
+/* The Main Area of the Grid & the sub-areas*/
+#portfolio-main {
+  /* padding-top:90px; */
+  height:100%;
+  grid-area:main-area;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+      "title-area"
+      "web-area"
+      "content-area"
+      "animation-area"
+      "ux-area";
+  }
+
+  #portfolio-main section {
+    height:350px;
+    cursor:pointer;
+  }
+  #portfolio-main section:hover {
+    border: solid 1px #fff;
+    opacity: 0.8;
+  }
+  #portfolio-main section h2{
+    margin-top: 150px;
+    text-align:center;
+    background-color:rgba(33,150,243, 0.94);
+    padding-top:14px;
+    padding-bottom:14px;
+    color:#fff;
+    font-size:14px;
+  }
+  /* The Web Basic Theme Area */
+  #web-main,
+  #content-main,
+  #animation-main,
+  #ux-main,
+  #profile-main {
+    grid-area: theme-area;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "theme-title-area"
+        "image-area-1"
+        "description-area"
+        "image-area-3";
+  }
+  /* The Section Web Image-1 & Image-2 */
+  #web-image-1 {
+    height:200px;
+    margin-bottom:20px; 
+  }
+  #web-image-3 {
+   height:200px;
+  }
+  /* The Section Content Image-1 & Image-2*/
+  #content-image-1 {
+    height:200px;
+    margin-bottom:20px; 
+  }
+  #content-image-3 {
+   height:200px;
+  }
+  /* The Section Animation Image-1 & Image-2 */
+  #animation-image-1 {
+    height:200px;
+    margin-bottom:20px; 
+  }
+  #animation-image-3 {
+   height:250px;
+   background-image: url('../images/storytelling-small.jpg');
+   background-position:top;
+  }
+  /* The Section UX Image-1 & Image-2 */
+  #ux-image-1 {
+    height:200px;
+    margin-bottom:20px; 
+  }
+  #ux-image-3 {
+   height:200px;
+   background-image: url('../images/ux-prototype-xd.jpg');
+  }
+
+  /* The Section My Profile Image-1 & Image-2 */
+  #profile-image-1 {
+    height:200px;
+    margin-bottom:20px; 
+  }
+  #profile-image-3 {
+   height:200px;
+   background-image: url('../images/ux-prototype-xd.jpg');
+  }
+
+  /* The FLow inside the Themes-Pages */
+  #flow {
+    list-style: none;  
+    width: 100%;
+  }
+
+  /* the Container for the Contact FORM */
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    max-width:100%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #2196F3;
+    color:#fff;
+  }
+}
+
+/* Media Queries for Responsive Web Design */
+/* Tablets, Ipads, Small Desktops */
+@media only screen and (min-width : 480px) and (max-width : 1000px) {  
+
+  /* The style for the Logo */
+  #logo { 
+    height:50px; 
+    float:none;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+  .menuIcon {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  height: 23px;
+  width: 27px;
+  z-index: 12;}
+  
+  /* Icon Bars */
+  .icon-bars {
+  background: white;
+  position: absolute;
+  left: 1px;
+  top: 45%;
+  height: 2px;
+  width: 20px;
+  transition: 0.4s;} 
+  
+  .icon-bars::before {
+  background: white;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -8px;
+  height: 2px;
+  width: 20px;
+  transition: 0.3s width 0.4s;
+  }
+  
+  .icon-bars::after {
+  margin-top: 0px;
+  background: white;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  width: 20px;
+  transition: 0.3s width 0.4s;
+  }
+  
+  /* Bars Shadows */
+  .icon-bars.overlay {
+  background: #FFFF00;
+  width: 20px;
+  animation: middleBar 3s infinite 0.5s;
+  } @keyframes middleBar {
+    0% {width: 0px}
+    50% {width: 20px}
+    100% {width: 0px}
+  } 
+  
+  .icon-bars.overlay::before {
+  background: #FFFF00;
+  width: 10px;
+  animation: topBar 3s infinite 0.2s;
+  } @keyframes topBar {
+    0% {width: 0px}
+    50% {width: 10px}
+    100% {width: 0px}
+  } 
+  
+  .icon-bars.overlay::after {
+  background: #FFFF00;
+  width: 15px;
+  animation: bottomBar 3s infinite 1s;
+  } @keyframes bottomBar {
+    0% {width: 0px}
+    50% {width: 15px}
+    100% {width: 0px}
+  } 
+  
+  
+  /* Toggle Menu Icon */
+  
+  .menuIcon {position: fixed;}
+  .menuIcon.toggle .icon-bars {
+  top: 5px;
+  transform: translate3d(0, 5px, 0) rotate(135deg);
+  transition-delay: 0.1s;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+  
+  .menuIcon.toggle .icon-bars::before {
+  top: 0;
+  transition-delay: 0.1s;
+  opacity: 0;}
+  
+  .menuIcon.toggle .icon-bars::after {
+  top: 10px;
+  transform: translate3d(0, -10px, 0) rotate(-270deg);
+  transition-delay: 0.1s;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+  
+  .menuIcon.toggle .icon-bars.overlay {
+  width: 20px;
+  opacity: 0;
+  transition: all 0s ease 0s;}
+  
+  /* ============== The Grid for Tablets & SmartPhones  ==============*/
+  
+  /* The Main Area of the Grid & the sub-areas*/
+  #portfolio-main {
+    /* padding-top:90px; */
+    height:100%;
+    grid-area:main-area;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "title-area title-area"
+        "web-area content-area"
+        "animation-area ux-area";
+    }
+  
+    #portfolio-main section {
+      height:350px;
+      cursor:pointer;
+    }
+    #portfolio-main section:hover {
+      border: solid 1px #fff;
+      opacity: 0.8;
+    }
+    #portfolio-main section h2{
+      margin-top: 150px;
+      text-align:center;
+      background-color:rgba(33,150,243, 0.94);
+      padding-top:14px;
+      padding-bottom:14px;
+      color:#fff;
+      font-size:14px;
+    }
+    /* The Web Basic Theme Area */
+    #web-main,
+    #content-main,
+    #animation-main,
+    #ux-main,
+    #profile-main {
+      grid-area: theme-area;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+          "theme-title-area"
+          "image-area-1"
+          "description-area"
+          "image-area-3";
+    }
+    /* The Section Web Image-1 & Image-2 */
+    #web-image-1 {
+      height:200px;
+      margin-bottom:20px; 
+    }
+    #web-image-3 {
+     height:200px;
+    }
+    /* The Section Content Image-1 & Image-2*/
+    #content-image-1 {
+      height:200px;
+      margin-bottom:20px; 
+    }
+    #content-image-3 {
+     height:200px;
+    }
+    /* The Section Animation Image-1 & Image-2 */
+    #animation-image-1 {
+      height:200px;
+      margin-bottom:20px; 
+    }
+    #animation-image-3 {
+     height:250px;
+     background-image: url('../images/storytelling-small.jpg');
+     background-position:top;
+    }
+    /* The Section UX Image-1 & Image-2 */
+    #ux-image-1 {
+      height:200px;
+      margin-bottom:20px; 
+    }
+    #ux-image-3 {
+     height:200px;
+     background-image: url('../images/ux-prototype-xd.jpg');
+    }
+  
+    /* The Section My Profile Image-1 & Image-2 */
+    #profile-image-1 {
+      height:200px;
+      margin-bottom:20px; 
+    }
+    #profile-image-3 {
+     height:200px;
+     background-image: url('../images/ux-prototype-xd.jpg');
+    }
+  
+    /* The FLow inside the Themes-Pages */
+    #flow {
+      list-style: none;  
+      width: 100%;
+    }
+  
+    /* the Container for the Contact FORM */
+    .container {
+      border-radius: 5px;
+      padding: 20px;
+      max-width:100%;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      background-color: #2196F3;
+      color:#fff;
+    }
+
+    /* TheHover Line in the menu */
+    .overlay-menu li a:hover:before {
+      background: #FFFF00;
+      width: 50%;
+      transition: width 0.5s cubic-bezier(0.22, 0.61,0.36, 1);}
+  }
+
+
+
+/* Media Queries for Responsive Web Design */
+/* VERY LARGE SCREENS */
+@media screen and (min-width : 2500px) {
+  main{
+    font-size:26px;
+  }
+
+}

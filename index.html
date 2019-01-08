@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The Head of the Home Page with Meta Tags & Title -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Konstantinos Anagnostou - Student of Multimedia Design & Communication KEA (Copenhagen)</title>
+    <meta name="description" content="This is the Personal Website of Konstantinos Anagnostou (Multimedia Designer & Web-Android Developer) from Greece.">
+    <meta name="title" content="Personal Website of Konstantinos Anagnostou">
+    <link href="css/portfolio.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+    <!-- Montserrat Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Animate CSS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<!-- The body of the Home Page -->
+
+<body>
+    <!-- The Main Grid CSS Layout for the Home Page (home-grid) -->
+    <div style="height:100%">
+
+        <!-- The header area -->
+        <header id="header">
+
+            <!-- The Navigation Bar / Menu -->
+            <nav id="navbar" class="navbarbox">
+                <!-- Logo with a link to the Home Page -->
+                <a href="index.html"><img src="images/logo.png" id="logo" class="centered" alt="The logo of Konstantinos Anagnostou Website"></a>
+
+                <div class="nav-wrapper">
+                    <!-- Navbar Links -->
+                    <ul>
+                        <li><a href="profile.html">Who am I</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Menu Example From Evelym S. https://www.linkedin.com/in/evelym-santos/ -->
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+            <span class="icon icon-bars"></span>
+            <span class="icon icon-bars overlay"></span>
+        </div>
+
+        <!-- Overlay Menu -->
+        <div class="overlay-menu">
+            <ul>
+                <li><a href="profile.html">Who am I</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- The Main Content of the Home Page -->
+        <main id="main-index">
+            <div id="map"></div>
+        </main>
+
+        <!-- The Footer of the Website -->
+        <footer id="footer">
+            <p class="copyright">&copy; 2019 - All Rights Reserved</p>
+            <p class="copyright">Made with <span id="heart">&#10084;</span> by Konstantinos Anagnostou<br></p>
+        </footer>
+    </div>
+
+    <!-- The JS for the menu -->
+    <script src="js/menu.js"></script>
+    <!-- Scripts for Google Maps JavaScript API -->
+    <script src="js/maps.js"></script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEFq7FPk1QaNgr7P4mzAfiPPVBs3P9hY&callback=initMap">
+      </script>
+</body>
+
+</html>
