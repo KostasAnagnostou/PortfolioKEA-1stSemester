@@ -1,5 +1,5 @@
 # PortfolioKEA-1stSemester
-This is a simple web portfolio with all my projects at 1st Semester at KEA - Copenhagen School Of Design &amp; Technology. The creation of web portfolio it was the final part of the 1st Semester. I used raw Grid CSS to create the responsive layouts. 
+This is a simple web portfolio with all my projects at 1st Semester at KEA - Copenhagen School Of Design &amp; Technology. The creation of the web portfolio it was the final part of the 1st Semester. I used raw Grid CSS to create the responsive layouts. 
 
 Requirements for the portfolio website<br>
 ● The portfolio website must be "hand coded" using HTML, CSS, and JavaScript. I.e. you<br>
